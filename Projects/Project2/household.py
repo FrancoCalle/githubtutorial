@@ -1,3 +1,8 @@
+import sys, os
+ppath = os.getcwd()
+sys.path.append(os.path.join(ppath,'Projects','Project2'))
+import FirmsMC
+import household
 '''
 This file is a module that has steady-state equilibrium functions for
 the household consumptions c1 and c2 as well as the marginal utility of

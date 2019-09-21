@@ -7,14 +7,18 @@ b_2 in the two-period-lived overlapping generations model.
 
 # Put import commands below here
 import numpy as np
-
+import sys, os
+ppath = os.getcwd()
+sys.path.append(os.path.join(ppath,'Projects','Project2'))
+import FirmsMC
+import household
 
 def get_K(b2):
     '''
     This will be a pretty simple function. Use steady-state equilibrium
     market clearing condition for the capital market (25) to return
     aggregate capital K as a function of savings b2.
-    
+
     Parameters
     ----------
     b2 : numeric
@@ -34,7 +38,7 @@ def get_L(nvec):
     This function will also be a simple function. Use steady-state
     equilibrium market clearing condition for the labor market (24) to
     return aggregate labor L as a function of nvec.
-    
+
     Parameters
     ----------
     nvec : np.array
@@ -52,8 +56,8 @@ def get_L(nvec):
 def get_r(b2, args):
     '''
     This function computes the steady-state interest rate as a function
-    of savings b2 using steady-state equilibrium equation (28). 
-    
+    of savings b2 using steady-state equilibrium equation (28).
+
     Parameters
     ----------
     b2 : numeric
@@ -69,7 +73,7 @@ def get_r(b2, args):
     r : numeric
         returns value for r
     '''
-    
+
     nvec, alpha, A, delta, beta, gamma = args
     K = get_K(b2)
     L = get_L(nvec)
@@ -81,7 +85,7 @@ def get_w(b2, args):
     '''
     This function computes the steady-state wage as a function of
     savings b2 using steady-state equilibrium equation (29).
-    
+
     Parameters
     ----------
     b2 : numeric
@@ -96,7 +100,7 @@ def get_w(b2, args):
     w : numeric
         returns value for w
     '''
-    
+
     nvec, alpha, A, delta, beta, gamma = args
     K = get_K(b2)
     L = get_L(nvec)

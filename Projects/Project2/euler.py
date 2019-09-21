@@ -5,9 +5,11 @@ savings in the two-period-lived overlapping generations model.
 '''
 
 # Put import commands below here
+import sys, os
+ppath = os.getcwd()
+sys.path.append(os.path.join(ppath,'Projects','Project2'))
 import FirmsMC
 import household
-
 import scipy.optimize as opt
 # Fill in the functions below
 
