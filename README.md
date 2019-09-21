@@ -5,3 +5,5 @@ Project 1 has students evaluate GitHub repositories.
 
 ## References
 Put references here.
+
+Project one: Computational general eq model
