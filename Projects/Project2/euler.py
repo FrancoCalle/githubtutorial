@@ -25,7 +25,7 @@ def eul_err(b2, *args):
     the error form of (30).
     '''
 
-
+    gamma = args[5]
 
 
     #Calculate LHS of equation #30
@@ -50,7 +50,7 @@ def eul_err(b2, *args):
 
 
     #Calculate using LHS and RHS
-    error = abs(LHS - RHS)
+    error = LHS - RHS
 
 
 
