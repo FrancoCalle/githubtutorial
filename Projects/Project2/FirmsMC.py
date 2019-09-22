@@ -33,6 +33,7 @@ def get_K(b2):
 
     return K
 
+
 def get_L(nvec):
     '''
     This function will also be a simple function. Use steady-state
@@ -49,9 +50,10 @@ def get_L(nvec):
     L : numeric
         returns value for L
     '''
-    L= np.sum(nvec)
+    L = np.sum(nvec)
 
     return L
+
 
 def get_r(b2, args):
     '''
@@ -77,9 +79,10 @@ def get_r(b2, args):
     nvec, alpha, A, delta, beta, gamma = args
     K = get_K(b2)
     L = get_L(nvec)
-    r = alpha * A * (L / K) ** (1 - alpha)  - delta
+    r = alpha * A * (L / K) ** (1 - alpha) - delta
 
     return r
+
 
 def get_w(b2, args):
     '''
